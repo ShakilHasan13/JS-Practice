@@ -60,9 +60,9 @@ document.write(a); */
  document.write("Success");*/
 
  //Template Literals--Backtick
-/* var a = `Hello World! 
+ var a = `Hello World! 
     We are Learning JavaScript`;
- console.log(a); */
+ document.write(a); 
 
  
 
