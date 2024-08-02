@@ -102,8 +102,59 @@ let myobj=new Car3(); //It will print "It's a constructor"
 class Car4{
     constructor(brand){
             this.brand=brand; //this.brand=object's brand. brand is the parameter's brand
-            console("Constractor of Car4 class")
+            console.log("Constractor of Car4 class")
     }
 }
 let q=new Car4("Audi R8"); //When we create new Car4(), there must be an input in the parenthesis as the constractor defines the must to do part
+ //We can change it later:
+ q.brand="RoseRoyald";
+ //we can pass multiple arguments through the constructor
+
+
+ //Inheritance
+ //extends keyword
+
+ class Parent {
+    hello(){
+        console.log("Hello")
+    }
+ }
+class Child extends Parent {
+
+}
+let obj=new Child();
+
+
+//super keyword
+//super keyword is used to call the constructor of its' parent class. It is used
+//to access the properties and methods of the parent class from the child class.
+class Person {
+    constructor(){
+        this.species="Homo sapiens";
+    }
+    eat(){
+        console.log("eat");
+    }
+    sleep(){
+        console.log("sleep");
+    }
+}
+class Engineer extends Person{
+    constructor(branch){
+        super();
+        this.branch=branch;
+    }
+    work(){
+        console.log("Solve the problem");
+    }
+}
+//The code will be crashed if there is no super keyword in the child class before
+//the this keyword. It's necessary when the the child has also has a constructor.
+let engineerObj=new Engineer("Software");
+//Therefore, whenever we try to add a constructor in a child class which class
+//has a extends keyword, we have to write the super() at the very begining inside the constructor
+
+//The compiling sequence here: the child constructor>parent constructor>child constructor
+//We should learn the usage of the super keyword from the documentation.
+
 
